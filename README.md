@@ -60,6 +60,7 @@ deemed by me to be shitty will be rejected.
 LICENSE
 -------
 
-Consider this repo a public service for anyone that has a co-worker like Brian.
+See the included `LICENSE` file for more information, but in short: consider
+this repo a public service for anyone that has a co-worker like Brian.
 Hopefully your Brian also leaves his/her computer unlocked.
 
