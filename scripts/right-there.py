@@ -5,6 +5,6 @@ import subprocess
 
 VOICES = ['Kathy', 'Vicki', 'Victoria']
 
-if random.randrange(0, 100) < 100:
+if random.randrange(0, 100) < 4:
     subprocess.call(['say', '-v', random.choice(VOICES), 'Ooo, right there.'])
 
