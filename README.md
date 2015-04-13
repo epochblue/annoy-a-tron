@@ -36,7 +36,7 @@ that we've had Brian's computer do so far:
 * Announce a randomly-generated time
 * Play a random system alert sound
 * Say "System Updates Available"
-* Open an image
+* Hide/minimize all windows for currently-open applications
 
 If you'd like to see what we've done in the past, just dig through the repo and
 model your script on one of those.
