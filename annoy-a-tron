@@ -1,1 +1,11 @@
-scripts/random-time.py
+#!/usr/bin/env python
+
+import os
+import random
+import subprocess
+
+SCRIPT = 'random-time.py'
+BASE_PATH = os.path.abspath(os.path.dirname(__file__))
+
+if random.randrange(0, 100) < 2:
+    subprocess.call([os.path.join(BASE_PATH, 'scripts', SCRIPT)])

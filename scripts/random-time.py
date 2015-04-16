@@ -5,8 +5,9 @@ import subprocess
 
 HOURS = range(1, 13)
 MINUTES = ["o'clock"] + ["o %s" % x for x in range(1, 10)] + range(10, 60)
-TIME = 'it is now {} {}'.format(random.choice(HOURS),
-                                random.choice(MINUTES))
+AM_PM = ['a.m.', 'p.m.']
+TIME = 'it is now {} {} {}'.format(random.choice(HOURS),
+                                random.choice(MINUTES),
+                                random.choice(AM_PM))
 
-if random.randrange(0, 100) < 4:
-    subprocess.call(['say', '-v', 'Alex', TIME])
+subprocess.call(['say', '-v', 'Alex', TIME])
