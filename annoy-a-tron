@@ -4,8 +4,11 @@ import os
 import random
 import subprocess
 
-SCRIPT = 'random-time.py'
 BASE_PATH = os.path.abspath(os.path.dirname(__file__))
+SCRIPTS_DIR = os.path.join(BASE_PATH, 'scripts')
+SCRIPTS = os.listdir(SCRIPTS_DIR)
 
 if random.randrange(0, 100) < 2:
-    subprocess.call([os.path.join(BASE_PATH, 'scripts', SCRIPT)])
+    random_script = random.choice(SCRIPTS)
+    subprocess.call([os.path.join(BASE_PATH, 'scripts', random_script)])
+
