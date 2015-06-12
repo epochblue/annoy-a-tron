@@ -2,13 +2,23 @@
 
 import os
 import random
+import datetime
 import subprocess
 
 BASE_PATH = os.path.abspath(os.path.dirname(__file__))
 SCRIPTS_DIR = os.path.join(BASE_PATH, 'scripts')
-SCRIPTS = os.listdir(SCRIPTS_DIR)
+SCRIPTS = filter(lambda x: not x.startswith('friday'), os.listdir(SCRIPTS_DIR))
 
-if random.randrange(0, 100) < 4:
+def should_play_friday():
+    now = datetime.datetime.now()
+    return now.isoweekday() == 5 and 10 < now.hour < 15 and now.minute == 0
+
+
+# If it's Friday, and top of the hour, then maybe we play some Rebecca Black?
+if should_play_friday() and random.randrange(0, 100) < 33:
+    subprocess.call([os.path.join(BASE_PATH, 'scripts', 'friday.osascript')])
+
+elif random.randrange(0, 100) < 5:
     random_script = random.choice(SCRIPTS)
     subprocess.call([os.path.join(BASE_PATH, 'scripts', random_script)])
 
