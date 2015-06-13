@@ -16,7 +16,7 @@ def should_play_friday():
 
 # If it's Friday, and top of the hour, then maybe we play some Rebecca Black?
 if should_play_friday() and random.randrange(0, 100) < 33:
-    subprocess.call([os.path.join(BASE_PATH, 'scripts', 'friday.osascript')])
+    subprocess.call([os.path.join(BASE_PATH, 'scripts', 'friday.applescript')])
 
 elif random.randrange(0, 100) < 5:
     random_script = random.choice(SCRIPTS)
