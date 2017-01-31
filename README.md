@@ -14,6 +14,12 @@ but now it's time to step it up. It's time to add the the ability to change
 the prank without having to touch his computer, and it's time to get people
 outside these walls involved.
 
+**Update**: _Brian eventually figured out what happened to his computer. A
+co-worker narced just as Brian was packing up his computer to return it to
+Apple because it was "acting funny". As a result, this project is no longer
+being actively developed. Pull requests and issues will be closed without
+review._
+
 
 How it works
 ------------
